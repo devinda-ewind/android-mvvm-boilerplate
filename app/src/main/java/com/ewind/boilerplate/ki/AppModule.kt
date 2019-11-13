@@ -1,5 +1,6 @@
-package com.ewind.boilerplate
+package com.ewind.boilerplate.ki
 
+import com.ewind.boilerplate.BuildConfig
 import com.ewind.boilerplate.data.remote.apis.WorksApi
 import com.ewind.boilerplate.util.network.createNetworkClient
 import org.koin.dsl.module.Module
@@ -11,6 +12,9 @@ val networkModule: Module = module {
 }
 
 val retrofit: Retrofit =
-    createNetworkClient(BuildConfig.API_URL, BuildConfig.DEBUG)
+    createNetworkClient(
+        BuildConfig.API_URL,
+        BuildConfig.DEBUG
+    )
 
 val worksApi: WorksApi = retrofit.create(WorksApi::class.java)

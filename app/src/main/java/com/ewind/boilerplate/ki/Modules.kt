@@ -1,4 +1,4 @@
-package com.ewind.boilerplate.ui
+package com.ewind.boilerplate.ki
 
 import com.ewind.boilerplate.data.repository.WorkRepositoryImpl
 import com.ewind.boilerplate.domain.repository.WorkRepository

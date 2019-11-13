@@ -3,6 +3,7 @@ package com.ewind.boilerplate
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
+import com.ewind.boilerplate.ki.networkModule
 import com.facebook.stetho.Stetho
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication

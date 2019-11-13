@@ -15,7 +15,8 @@ class ShiftAdapter(val shiftList: MutableList<DShift>) :
     RecyclerView.Adapter<ShiftAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(parent.inflate(com.ewind.boilerplate.R.layout.item_shift, false))
+        val view = parent.inflate(com.ewind.boilerplate.R.layout.item_shift, false)
+        return ViewHolder(view)
     }
 
     override fun getItemCount(): Int = shiftList.size

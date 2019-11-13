@@ -10,7 +10,7 @@ import com.ewind.boilerplate.databinding.ActivityMainBinding
 import com.ewind.boilerplate.domain.model.DShift
 import com.ewind.boilerplate.domain.model.toViewModel
 import com.ewind.boilerplate.ui.component.adapter.WorksAdapter
-import com.ewind.boilerplate.ui.injectFeature
+import com.ewind.boilerplate.ki.injectFeature
 import com.ewind.boilerplate.ui.main.base.BaseActivity
 import com.ewind.boilerplate.ui.main.work.EXTRA_LOCATIONS
 import com.ewind.boilerplate.ui.main.work.EXTRA_NAME
