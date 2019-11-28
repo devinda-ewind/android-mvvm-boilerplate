@@ -4,18 +4,20 @@ import com.ewind.boilerplate.data.repository.WorkRepositoryImpl
 import com.ewind.boilerplate.domain.repository.WorkRepository
 import com.ewind.boilerplate.domain.usecase.WorkUseCase
 import com.ewind.boilerplate.ui.main.home.MainViewModel
-import org.koin.androidx.viewmodel.ext.koin.viewModel
-import org.koin.dsl.module.Module
-import org.koin.dsl.module.module
-import org.koin.standalone.StandAloneContext.loadKoinModules
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.context.loadKoinModules
+import org.koin.core.module.Module
+import org.koin.dsl.module
 
 fun injectFeature() = loadFeature
 
 private val loadFeature by lazy {
     loadKoinModules(
-        viewModelModule,
-        useCaseModule,
-        repositoryModule
+        listOf(
+            viewModelModule,
+            useCaseModule,
+            repositoryModule
+        )
     )
 }
 

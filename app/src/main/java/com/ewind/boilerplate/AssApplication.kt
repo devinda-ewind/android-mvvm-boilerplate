@@ -5,9 +5,8 @@ import android.content.Context
 import androidx.multidex.MultiDex
 import com.ewind.boilerplate.ki.networkModule
 import com.facebook.stetho.Stetho
-import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
-import org.koin.android.ext.android.startKoin
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 /**
  * Created by cuongpm on 11/29/18.
@@ -15,14 +14,15 @@ import org.koin.android.ext.android.startKoin
 
 open class AssApplication: Application() {
 
-    private lateinit var androidInjector: AndroidInjector<out DaggerApplication>
-
     override fun onCreate() {
         super.onCreate()
 
         // Initialize Stetho
         Stetho.initializeWithDefaults(this)
-        startKoin(this, listOf(networkModule))
+        startKoin {
+            androidContext(this@AssApplication)
+            modules(networkModule)
+        }
     }
 
     override fun attachBaseContext(base: Context?) {

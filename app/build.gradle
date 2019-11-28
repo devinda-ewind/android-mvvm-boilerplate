@@ -71,13 +71,6 @@ dependencies {
     //implementation Room.rxjava2
     kapt Room.compiler
 
-    // Dagger2
-    implementation Dagger.runtime
-    implementation Dagger.android
-    implementation Dagger.android_support
-    kapt Dagger.compiler
-    kapt Dagger.android_processor
-
     // OkHttp and Retrofit
     implementation Okhttp.runtime
     implementation Okhttp.logging
@@ -96,6 +89,7 @@ dependencies {
     implementation Koin.android
     implementation Koin.viewmodel
     implementation Koin.scope
+    implementation Koin.ext
     // Glide
     implementation Glide.runtime
     annotationProcessor Glide.compiler

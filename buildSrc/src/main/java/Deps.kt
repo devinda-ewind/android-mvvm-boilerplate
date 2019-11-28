@@ -20,7 +20,7 @@ object Versions {
     const val kotlin = "1.3.50"
 
     const val ktx = "1.1.0"
-    const val koin = "1.0.2"
+    const val koin = "2.0.1"
     const val rxjava = "2.2.6"
     const val rxkotlin = "2.3.0"
     const val retrofit = "2.5.0"
@@ -209,6 +209,8 @@ object Koin {
     const val android = "org.koin:koin-android:${Versions.koin}"
     const val viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
     const val scope = "org.koin:koin-androidx-scope:${Versions.koin}"
+    const val ext = "org.koin:koin-android-ext:${Versions.koin}"
+
 }
 
 object Testing {
