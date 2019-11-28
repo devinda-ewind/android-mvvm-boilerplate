@@ -1,8 +1,8 @@
 package com.ewind.boilerplate.util.ext
 
-import android.app.Activity
+import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
+import android.provider.Settings
 import com.google.gson.Gson
 
 inline fun <reified T : Any> Any.mapTo(): T {
@@ -17,9 +17,12 @@ inline fun <reified T : Any> String.jsonStringMapTo(): T =
 
 fun Any.toJsonString(): String = Gson().toJson(this@toJsonString)
 
-inline fun <reified T : Activity> Context?.startActivity(func: Intent.() -> Unit) {
-    val intent = Intent(this, T::class.java).apply {
-        func()
-    }
-    this?.startActivity(intent)
+
+@SuppressLint("HardwareIds")
+fun Context.getDeviceId(): String {
+    return Settings.Secure.getString(this.contentResolver, Settings.Secure.ANDROID_ID)
+}
+
+fun Context.getDeviceType(): String {
+    return "Android"
 }

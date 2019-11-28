@@ -14,7 +14,7 @@ const val HH_MM = "h:mm a"
 const val DD_MMMM_EEEE = "dd'%s' MMMM, EEEE"
 const val DD_MMM_YYYY_H_MM_AP = "dd/MMM/yyyy h:mm a"
 const val EEEE_DD_MMMM = "EEEE dd MMMM"
-const val YYYY_MM_DD_hh_mm_ss = "yyyy-MM-dd hh:mm:ss"
+const val YYYY_MM_DD_hh_mm_ss = "yyyy-MM-dd HH:mm:ss"
 const val EE_DD_MMM = "EE dd MMM"
 
 
